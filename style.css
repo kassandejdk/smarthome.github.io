@@ -1,0 +1,73 @@
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+.container{
+     margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .5rem;
+}
+.first-field{
+    flex-direction: column;
+    font-size: 1.1rem;
+    font-weight: 800;
+    border-radius: .5rem;
+}
+.first-field > legend{
+    color: blue;
+}
+fieldset{
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+}
+.block p{
+    font-weight: 800;
+    color: rgb(243, 162, 11);
+}
+label{
+    display: block;
+    background-color: #3d3b3b;
+    height: 2.5rem;
+    width: 5rem;
+    position: relative;
+    border-radius: 3rem;
+    padding: .15rem;
+    transition: .7s;
+    cursor: pointer;
+    
+}
+label::before{
+    position: absolute;
+    content: '';
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 3rem;
+    background-color: #fb9507;
+    transition: .7s;
+}
+input[type="checkbox"]{
+    display: none;
+}
+
+input[type="checkbox"]:checked + label::before{
+    transition: .7s;
+    transform: translateX(2.45rem);
+}
+
+input[type="checkbox"]:checked + label{
+    transition: .7s;
+    background-color: rgb(131, 249, 131);
+}
+
+@media (max-width:356px) {
+    .container{
+        margin: auto;
+    }
+}
